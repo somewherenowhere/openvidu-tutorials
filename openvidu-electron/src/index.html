@@ -25,7 +25,36 @@
     document.write(process.versions.electron)
   </script>
 
-  <div id="join">
+<div>
+  <button onclick="startWebrtc()" id="uiStart">Start</button>
+  <button id="uiStop">Stop</button>
+</div>
+
+<div>
+  <h2>Local video (from webcam)</h2>
+  <video
+    id="uiLocalVideo"
+    style="width: 320px"
+    muted
+    playsinline
+  ></video>
+</div>
+
+<div>
+  <h2>Remote video (from local source)</h2>
+  <video
+    id="uiRemoteVideo"
+    style="width: 320px"
+    playsinline
+  ></video>
+</div>
+
+<div>
+  <h2>Console</h2>
+  <div id="uiConsole"></div>
+</div>
+
+  <!-- <div id="join">
     <h1>Join a video session</h1>
     <form onsubmit="initPublisher(); return false">
       <p>
@@ -52,7 +81,7 @@
         <h3>OTHERS</h3>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </body>
 
